@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio número 5</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(102, 82, 110);
+            color: white;
+        } 
+        h1 {
+            color: rgb(212, 29, 29);
+        }
+    </style>
+</head>
+<body>
+        
+    <script>
+        var nome = window.prompt('Qual é seu nome ?')
+        document.write(`<h1>OLÁ ${nome.toUpperCase()} TUDO BEM ?</h1>`)
+        var n1 = Number(window.prompt('Me fala um número:'))
+        var n2 = Number(window.prompt('Me diz outro número:'))
+        var s = n1 + n2
+        document.write(`A soma entre ${n1} e ${n2} é ${s}</br>`)
+        var idade = window.prompt(`Certo ${nome}, em que ano vc nasceu ?`)
+        var ano = 2022
+        var r = ano - idade
+        var r2 = r - 2
+        document.write(`Você tem entre ${r2} à ${r} anos de idade</br> `)
+        document.write(`Vi aqui em meu sistema que seu nome tem ${nome.length} letras !`)
+        
+    </script>
+</body>
+</html>

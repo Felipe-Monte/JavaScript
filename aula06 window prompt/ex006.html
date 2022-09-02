@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(83, 66, 66);
+            color: white;
+        }
+        h1 {
+            font: normal 25pt arial;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Me fala seu nome:')
+        var idade = window.prompt('Quantos anos vc tem ?')
+        var n1 = Number(window.prompt('Me fala um numero:'))
+        var n2 = Number(window.prompt('Agora outro numero:'))
+        var s = n1 + n2
+        document.write(`<h1>SEJA BEM VINDO ${nome.toUpperCase()}</h1>`)
+        document.write(`<strong>${nome.toUpperCase()}</strong></br>Você tem ${idade} anos !</br>`)
+        document.write(`Seu nome tem ${nome.length} letras !</br>`)
+        document.write(`O resultado da soma entre os numeros que voce digitou é: ${s} !</br>`)
+        if (s > 10) {
+        document.write('maior que 10')
+        } else {
+        document.write('menor que 10')
+        }
+
+
+    </script>
+</body>
+</html>

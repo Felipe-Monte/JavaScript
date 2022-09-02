@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <style>
+        input {font: normal 18pt arial;}
+        div#res {font: normal 14pt arial; width: 300px;}
+    </style>
+</head>
+<body>
+     <h1>Progama teste</h1>
+     <h2>Digite seu nome</h2>
+     <input type="text" name="txtn1" id="txtn1">
+     <input type="button" value="verificar" onclick="verificar()">
+     <p><div id="res">Resposta aqui</div></p>
+
+</body>
+    <script>
+     function verificar() {
+     var res = window.document.getElementById('res')
+     var tn1 = window.document.getElementById('txtn1')
+     var c1 = tn1.value
+     if (c1 == 'felipe' || c1 == 'FELIPE') {
+         res.innerHTML = `Olá <strong>${c1.toUpperCase()}</strong> dê continuidade ao progama`
+         res.style.backgroundColor = 'pink'
+     } else {
+         res.innerHTML = `Olá <strong>${c1.toUpperCase()}</strong> Seja bem vindo`
+         res.style.backgroundColor = 'white'
+    }}
+    </script>
+
+</html>

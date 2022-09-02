@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: 20pt Arial;
+            background-color: rgb(68, 68, 109);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        var idade = window.prompt('Me fala sua idade:')
+        document.write(`Olá <strong>${nome.toUpperCase()}</strong> seu nome tem ${nome.length} letras.</br>`)
+        document.write(`<strong>${nome}</strong> seu nome em maiusculo é ${nome.toUpperCase()}</br>`)
+        document.write(`Seu nome em minusculo é ${nome.toLowerCase()}</br>`)
+        document.writeln(`Sua idade é de ${idade} anos !`)
+        window.confirm(`Seus dados estao corretos nome: ${nome} idade: ${idade} ?`)
+    </script>
+</body>
+</html>
