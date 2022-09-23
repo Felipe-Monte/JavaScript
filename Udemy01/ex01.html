@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste javascript</title>
+    <style>
+        h1 {
+            width: 200px;
+            height: 50px;
+            margin: 10px auto;
+            text-align: center;
+            background-color: gray;
+        }
+
+        div.my-button {
+            width: 250px;
+            height: 50px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        div button {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-blue">Azul</h1>
+    <h1 class="text-blue">Azul</h1>
+    <h1 class="text-blue">Azul</h1>
+
+    <h1 class="text-red">Vermelho</h1>
+    <h1 class="text-red">Vermelho</h1>
+    <h1 class="text-red">Vermelho</h1>
+
+    <div class="my-button">
+        <button onclick="mudarAzul()">Azul</button>
+        <button onclick="mudarVermelho()">Vermelho</button>
+    </div>
+
+    <script>
+        var azul = document.querySelectorAll('.text-blue')
+        var vermelho = document.querySelectorAll('.text-red')
+
+        function mudarAzul() {
+            var i = 0
+            for (i = 0; azul.length > i; i++) {
+                azul[i].style.color = 'blue'
+            }
+
+            for(i = 0; vermelho.length > i; i++) {
+                vermelho[i].style.display = 'none'
+            }
+            document.body.style.backgroundColor = "blue"
+        }
+
+        function mudarVermelho() {
+            var i = 0
+            for (i = 0; vermelho.length > i; i++) {
+                vermelho[i].style.color = 'red'
+            }
+
+            for(i = 0; azul.length > i; i++) {
+                azul[i].style.display = 'none'
+            }
+            document.body.style.backgroundColor = "red"
+        }
+
+    </script>
+</body>
+
+</html>
