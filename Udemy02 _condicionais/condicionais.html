@@ -67,7 +67,7 @@
             line-height: 40px;
             margin-top: -2px;
             color: white;
-            transition: all .3  s ease-out;
+            transition: all .3 s ease-out;
             background-color: green;
         }
 
@@ -118,12 +118,50 @@
             var verifarNome = document.getElementById('field-form-nome')
             var verificarEmail = document.getElementById('field-form-email')
 
-            if (nome.length > 0 && nome.length >= 3) {
-                verifarNome.querySelector('span').classList.add('success')
-                verifarNome.querySelector('span').innerText = 'Validado com sucesso'
-            } else {
-                verifarNome.querySelector('span').classList.add('error')
-                verifarNome.querySelector('span').innerText = 'Dados incorretos'
+            // if (nome.length > 0 && nome.length >= 3) {
+            //     verifarNome.querySelector('span').classList.add('success')
+            //     verifarNome.querySelector('span').innerText = 'Validado com sucesso'
+            // } else {
+            //     verifarNome.querySelector('span').classList.add('error')
+            //     verifarNome.querySelector('span').innerText = 'Dados incorretos'
+            // }
+
+
+            switch (nome.length) {
+                case 0:
+                    verifarNome.querySelector('span').classList.add('error')
+                    verifarNome.querySelector('span').innerText = 'Campo vazio'
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
+                    break
+                case 1:
+                    verifarNome.querySelector('span').classList.add('error')
+                    verifarNome.querySelector('span').innerText = 'Coloque pelos menos 3 letras'
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
+                    break
+                case 2:
+                    verifarNome.querySelector('span').classList.add('error')
+                    verifarNome.querySelector('span').innerText = 'Coloque pelos menos 3 letras'
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
+                    break
+                case 3:
+                    verifarNome.querySelector('span').classList.add('success')
+                    verifarNome.querySelector('span').innerText = 'Validade com sucesso'
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
+                    break
+                default:
+                    verifarNome.querySelector('span').classList.add('success')
+                    verifarNome.querySelector('span').innerText = 'Validade com sucesso'
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
             }
 
             if (isEmail.test(email)) {
@@ -134,7 +172,7 @@
                 verificarEmail.querySelector('span').innerText = 'Email invalido'
             }
 
-        
+
         }
 
     </script>
