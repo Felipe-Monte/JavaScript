@@ -6,12 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    <style>
+        div.box {
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            background-color: cornflowerblue;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
 
-    </div>
+    <script>
+        var caixa = document.getElementById('box-1')
+        var caixa2 = document.getElementById('box-2')
+        var caixa3 = document.getElementById('box-3')
+        var allBoxes = document.querySelectorAll('.box')
+
+        // caixa.addEventListener('click', function () {
+        //     for (i = 0; allBoxes.length > i; i++) {
+        //         allBoxes[i].style.backgroundColor = 'red'
+        //     }
+        // })
+        caixa.addEventListener('click', function () {
+            caixa.style.backgroundColor = 'red'
+            caixa2.style.backgroundColor = 'black'
+            caixa3.style.backgroundColor = 'purple'
+        })
+    </script>
 </body>
 
 </html>
