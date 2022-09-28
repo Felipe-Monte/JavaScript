@@ -5,36 +5,42 @@ var btn = document.getElementById('botao')
 var meusGatos = {
     gatos: [
         {
-            "nome": 'carlos',
+            "nome": 'Carlos',
             'descricao': 'gato inteligente',
-            'fotoUrl': 'imagens/gato-01.jpg',
+            'fotoUrl': 'images/gato-01.jpg',
             'linkExterno': 'https://www.instagram.com/felipe_mmonte/'
         },
 
         {
-            'nome': 'felipe',
+            'nome': 'Felipe',
             'descricao': 'gato feliz',
-            'fotoUrl': 'imagens/gato-01.jpg',
+            'fotoUrl': 'images/gato-02.jpg',
             'linkExterno': 'https://www.instagram.com/felipe_mmonte/'
         },
 
         {
-            'nome': 'monte',
+            'nome': 'Monte',
             'descricao': 'gato alegre',
-            'fotoUrl': 'imagens/gato-01.jpg',
+            'fotoUrl': 'images/gato-03.jpg',
             'linkExterno': 'https://www.instagram.com/felipe_mmonte/'
         }
     ]
 }
 
 function getGato() {
-    var texto = document.getElementById('texto').value
+    //Buscando valor da caixa de texto e coloando tudo em letras minúsculas.
+    var texto = document.getElementById('texto').value.toLowerCase()
 
+
+    //Loop para verificar cada gato do array e encontrar o que deseja.
     for (var i = 0; meusGatos.gatos.length > i; i++) {
 
-        if (texto == meusGatos.gatos[i].nome) {
+
+        // if para: se o texto digitado for == ao nome de algum gato faça:
+        if (texto == meusGatos.gatos[i].nome.toLowerCase()) {
             card.querySelector('h1').innerHTML = meusGatos.gatos[i].nome  
-            return;
+            card.querySelector('img').setAttribute('src', meusGatos.gatos[i].fotoUrl)  
+            return; // return para parar loop assim que for encontrado 
         } else {
             card.querySelector('h1').innerHTML = 'gato nao tem'
             
