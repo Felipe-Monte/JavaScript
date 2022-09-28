@@ -27,16 +27,12 @@
         var caixa3 = document.getElementById('box-3')
         var allBoxes = document.querySelectorAll('.box')
 
-        // caixa.addEventListener('click', function () {
-        //     for (i = 0; allBoxes.length > i; i++) {
-        //         allBoxes[i].style.backgroundColor = 'red'
-        //     }
-        // })
         caixa.addEventListener('click', function () {
-            caixa.style.backgroundColor = 'red'
-            caixa2.style.backgroundColor = 'black'
-            caixa3.style.backgroundColor = 'purple'
+            for (i = 0; allBoxes.length > i; i++) {
+                allBoxes[i].style.backgroundColor = 'red'
+            }
         })
+       
     </script>
 </body>
 
