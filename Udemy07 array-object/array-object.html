@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+    <style>
+        .lista {
+            width: 300px;
+            height: auto;
+            display: table;
+            padding: 30px;
+            margin: 60px auto;
+            color: white;
+            font-size: 2em;
+            background-color: indigo;
+            border-radius: 10px;
+            list-style: none;
+        }
+
+        .lista li {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="lista" id="lista">
+
+    </ul>
+
+
+    <script>
+        var lista = document.getElementById('lista')
+
+        var nomes = ['Felipe', 'Carlos', 'Igor', 'Maria']
+        var myList = [] // importante para mostrar na tela !
+
+        var usuario = {
+            'nome': 'Felipe',
+            'idade': '25',
+            'altura': '1.80'
+        }
+
+
+        // for (var i = 0; nomes.length > i; i++) {
+        //     myList.push('<li>' + nomes[i] + '</li>')
+        // }
+
+
+        // Map
+        // Object: entries > values > keys
+        
+        Object.entries(usuario).map(function(ordem){
+            myList.push('<li>' + ordem + '</li>')
+        })
+
+    
+        lista.insertAdjacentHTML("beforeend", myList.join(''))
+
+
+
+    </script>
+</body>
+
+</html>
