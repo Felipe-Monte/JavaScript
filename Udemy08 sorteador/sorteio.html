@@ -7,31 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador</title>
     <style>
-        h1 {text-align: center;}
-        #btn {display:block; margin: auto;}
+        h1 {
+            text-align: center;
+        }
+
+        #btn {
+            display: block;
+            margin: 10px auto;
+            width: 200px;
+            height: 50px;
+        }
+
+        #btn2 {
+            display: block;
+            margin: 10px auto;
+            width: 200px;
+            height: 50px;
+        }
+
+
+        #res {
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+            height: 250px;
+            line-height: 200px;
+            font-size: 2em;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <h1>AQUI VAI O RESULTADO</h1>
-    <button id="btn">Gerar</button>
+    <h1>SORTEADOR</h1>
+    <button id="btn">Gerar nome</button>
+    <button id="btn2">Gerar numero</button>
+    <div id="res">
+        <p>Aqui vai o sorteio</p>
+    </div>
 
     <script>
         var title = document.querySelector('h1')
+        var res = document.querySelector('p')
 
         var nomes = ['felipe', 'carlos', 'monte', 'mandinga']
 
         function get() {
 
             var pegaNome = Math.floor(Math.random() * nomes.length);
-            title.innerHTML = nomes[pegaNome]
+            res.innerHTML = nomes[pegaNome].toUpperCase()
 
-            setTimeout(function () {
-                window.location.reload();
-            }, 2000);
+            // setTimeout(function () {
+            //     window.location.reload();
+            // }, 2000);
         }
 
         btn.addEventListener('click', get)
+
+
+        function get2() {
+
+            var pegaNumero = Math.floor(Math.random() * 100);
+            res.innerHTML = pegaNumero
+
+            // setTimeout(function () {
+            //     window.location.reload();
+            // }, 2000);
+        }
+
+        btn2.addEventListener('click', get2)
 
     </script>
 </body>
