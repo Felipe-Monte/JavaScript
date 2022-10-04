@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <style>
+        h1 {text-align: center;}
+        #btn {display:block; margin: auto;}
+    </style>
+</head>
+
+<body>
+    <h1>AQUI VAI O RESULTADO</h1>
+    <button id="btn">Gerar</button>
+
+    <script>
+        var title = document.querySelector('h1')
+
+        var nomes = ['felipe', 'carlos', 'monte', 'mandinga']
+
+        function get() {
+
+            var pegaNome = Math.floor(Math.random() * nomes.length);
+            title.innerHTML = nomes[pegaNome]
+
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000);
+        }
+
+        btn.addEventListener('click', get)
+
+    </script>
+</body>
+
+</html>
